@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Picture } from "../models/picture.model";
 
 @Component({
   selector: 'app-picture',
@@ -8,6 +9,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class PictureComponent implements OnInit, OnDestroy {
   // J'utilise le bang '!' pour spécifier à l'IDE que je compte initialiser la
   // valeur de l'attribut juste après (dans le constructeur)
+  @Input() picture!: Picture;
   title!: string;
   description!: string;
   creationDate!: Date;
@@ -18,11 +20,6 @@ export class PictureComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    this.title = 'Leaves';
-    this.description = 'Feuilles';
-    this.creationDate = new Date();
-    this.imageUrl = "https://cdn.pixabay.com/photo/2017/08/08/01/17/colorful-2609978_960_720.jpg";
-    this.likes = 4;
     this.textLikeButton = 'I like it !';
   }
 
@@ -31,12 +28,11 @@ export class PictureComponent implements OnInit, OnDestroy {
 
   onClickLike() {
     if (this.textLikeButton === 'I like it !') {
-      this.likes++;
+      this.picture.likes++;
       this.textLikeButton = 'Oops, unlike';
     } else {
-      this.likes--;
+      this.picture.likes--;
       this.textLikeButton = 'I like it !';
     }
   }
-
 }

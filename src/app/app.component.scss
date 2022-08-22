@@ -92,6 +92,7 @@ svg.material-icons:not(:last-child) {
 
 .card-container .card:not(:last-child) {
   margin-right: 0;
+  display: flex;
 }
 
 .card.card-small {

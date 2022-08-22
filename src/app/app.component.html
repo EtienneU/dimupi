@@ -8,7 +8,11 @@
 <div class="content" role="main">
 
   <!-- Pictures - Highlight Card-->
-  <app-picture></app-picture>
+  <div class="card-container">
+    <app-picture [picture]="myPicture1"></app-picture>
+    <app-picture [picture]="myPicture2"></app-picture>
+    <app-picture [picture]="myPicture3"></app-picture>
+  </div>
 
   <!-- Resources -->
   <h2>Resources</h2>
