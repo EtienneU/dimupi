@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
       creationDate: new Date(),
       imageUrl: "https://cdn.pixabay.com/photo/2017/08/08/01/17/colorful-2609978_960_720.jpg",
       likes: 10,
-      location: 'dans la forêt'
+      location: 'Dans la forêt'
   };
     this.myPicture2 = {
       title: 'Milky Way',

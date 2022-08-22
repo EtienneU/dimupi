@@ -3,6 +3,7 @@
   <img [src]="picture.imageUrl" [alt]="picture.title">
   <p>{{ picture.description }}</p>
   <p>publiée le {{ picture.creationDate }}</p>
+  <p *ngIf="picture.location">{{ picture.location }}</p>
   <button (click)="onClickLike()">{{ textLikeButton }}</button>
   <p>{{ picture.likes }} 💚</p>
 </div>
