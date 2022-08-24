@@ -5,4 +5,5 @@ export class Picture {
   imageUrl!: string;
   likes!: number;
   location?: string // propriété optionelle (d'où le '?')
+  price?: number;
 }
