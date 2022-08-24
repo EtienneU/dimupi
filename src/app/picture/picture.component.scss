@@ -1,41 +1,59 @@
-.card {
+p {
+  margin : 0;
+}
+
+.picture-card {
   all: unset;
   border-radius: 4px;
   border: 1px solid #eee;
-  background-color: #fafafa;
-  height: 40px;
-  width: 200px;
-  margin: 0 8px 16px;
-  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
   line-height: 24px;
-}
-
-.card.picture-card {
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  border: none;
   height: auto;
+  box-sizing: border-box;
   min-width: 30%;
-  position: relative;
-  width: 35%;
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: lightgray 4px 4px 20px;
   img {
     width: 100%;
   }
+  h2 {
+    margin-bottom: 0;
+  }
+  p, span {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  button {
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: lightgray 3px 3px 7px;
+    margin-right: 20px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: lightgray 0 0 5px;
+    }
+  }
 }
 
-p {
-  margin : 0;
-}
-
-.face-snap-card {
-  width: 35%;
-  img {
-    width: 100%;
+.liked {
+  background-color: rgba(lightgreen, 0.4);
+  color: darkgreen;
+  button {
+    box-shadow: lightgreen 3px 3px 7px;
+    color: darkgreen;
+    &:active {
+      box-shadow: lightgreen 0 0 5px;
+    }
   }
 }

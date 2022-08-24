@@ -10,11 +10,6 @@ export class PictureComponent implements OnInit, OnDestroy {
   // J'utilise le bang '!' pour spécifier à l'IDE que je compte initialiser la
   // valeur de l'attribut juste après (dans le constructeur)
   @Input() picture!: Picture;
-  title!: string;
-  description!: string;
-  creationDate!: Date;
-  likes!: number;
-  imageUrl!: string;
   textLikeButton!: string;
 
   constructor() { }

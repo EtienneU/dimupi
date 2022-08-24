@@ -9,9 +9,8 @@
 
   <!-- Pictures - Highlight Card-->
   <div class="card-container">
-    <app-picture [picture]="myPicture1"></app-picture>
-    <app-picture [picture]="myPicture2"></app-picture>
-    <app-picture [picture]="myPicture3"></app-picture>
+    <app-picture *ngFor="let picture of myPictures"
+                 [picture]="picture"></app-picture>
   </div>
 
   <!-- Resources -->
