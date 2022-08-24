@@ -1,4 +1,5 @@
 export class Picture {
+  id!: number;
   title!: string;
   description!: string;
   creationDate!: Date;

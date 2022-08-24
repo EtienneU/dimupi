@@ -1,0 +1,24 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  //background-color: #1976d2;
+  background : url('../../assets/img/rainbow_paint.jpg') no-repeat;
+  background-size: 100%;
+  background-position: center;
+  color: black;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+header img {
+  margin: 0 16px;
+}
+
+header span {
+  background-color: white;
+}
