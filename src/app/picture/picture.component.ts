@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Picture } from "../models/picture.model";
-import {PicturesService} from "../services/pictures.service";
+import { PicturesService } from "../services/pictures.service";
 
 @Component({
   selector: 'app-picture',

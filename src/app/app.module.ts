@@ -19,7 +19,7 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'fr-FR'}
+    { provide: LOCALE_ID, useValue: 'fr-FR' }
   ],
   bootstrap: [AppComponent]
 })
