@@ -1,8 +1,9 @@
 <div class="card-container">
   <app-picture *ngFor="let picture of pictures"
                [picture]="picture"></app-picture>
+  <p>
+    <button (click)="onClickHomePage()">Home Page</button>
+    <button (click)="onClickTopOfPage()">Top of Page</button>
+  </p>
 </div>
-<p>
-  <button (click)="onClickHomePage()">Home Page</button>
-  <button (click)="onClickTopOfPage()">Top of Page</button>
-</p>
+

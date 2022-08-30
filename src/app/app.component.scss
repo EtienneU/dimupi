@@ -7,16 +7,16 @@
   align-items: center;
 }
 
-footer {
-  margin-top: 8px;
+app-footer{
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  line-height: 20px;
-}
-
-footer a {
-  display: flex;
-  align-items: center;
+  background-color: #ffffff;
+  font-size: 1.0em;
+  border-bottom: 3px solid #ef166d;
+  margin-top: 10px;
+  width: 100%;
 }
 
 svg#clouds {
