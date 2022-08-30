@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { SinglePictureComponent } from './single-picture/single-picture.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     PictureListComponent,
     HeaderComponent,
     HomePageComponent,
-    FooterComponent
+    FooterComponent,
+    SinglePictureComponent
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,25 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Picture } from "../models/picture.model";
 import { PicturesService } from "../services/pictures.service";
-import { Router } from "@angular/router";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-picture',
-  templateUrl: './picture.component.html',
-  styleUrls: ['./picture.component.scss']
+  selector: 'app-single-picture',
+  templateUrl: './single-picture.component.html',
+  styleUrls: ['./single-picture.component.scss']
 })
-export class PictureComponent implements OnInit, OnDestroy {
-  // J'utilise le bang '!' pour spécifier à l'IDE que je compte initialiser la
-  // valeur de l'attribut juste après (dans le constructeur)
-  @Input() picture!: Picture;
+export class SinglePictureComponent implements OnInit {
+
+  picture!: Picture;
   textLikeButton!: string;
 
   constructor(private pictureService: PicturesService,
-              private router: Router) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.textLikeButton = 'I like it !';
+    const pictureId = +this.route.snapshot.params['id']; //type cast : le signe '+' permet de convertir le string en number
+    this.picture = this.pictureService.getPictureById(pictureId);
   }
 
   ngOnDestroy(): void {
@@ -32,9 +33,5 @@ export class PictureComponent implements OnInit, OnDestroy {
       this.pictureService.onLikePictureById(this.picture.id, false);
       this.textLikeButton = 'I like it !';
     }
-  }
-
-  onViewDetails() {
-    this.router.navigateByUrl(`picture/${this.picture.id}`);
   }
 }

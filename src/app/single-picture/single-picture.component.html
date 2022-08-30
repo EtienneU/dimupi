@@ -1,0 +1,13 @@
+<div class="picture-card liked" [ngClass]="{liked: textLikeButton === 'Oops, unlike'}">
+  <h2>{{ picture.title | uppercase }}</h2> <!-- Le pipe permet de formater l'affichage (ici sur la casse du string) -->
+  <img [src]="picture.imageUrl" [alt]="picture.title">
+  <div>{{ picture.description | lowercase}}</div>
+  <p>publiée le {{ picture.creationDate | date: 'd MMMM yyyy, à H:mm'}}</p>
+  <p *ngIf="picture.location">{{ picture.location }}</p>
+  <p *ngIf="picture.price">En vente - {{ picture.price | currency: 'EUR'}}</p>
+  <p>
+    <button (click)="onClickLike()">{{ textLikeButton }}</button>
+    <span [ngStyle]="{ color:'rgb(0,' + picture.likes * 10 + ', 0)'}">{{ picture.likes }} 💚</span>
+  </p>
+</div>
+<button routerLink="/pictures"><< Back</button>
