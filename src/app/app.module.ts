@@ -7,16 +7,22 @@ import { AppComponent } from './app.component';
 import { PictureComponent } from './picture/picture.component';
 import { PictureListComponent } from './picture-list/picture-list.component';
 import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { HomePageComponent } from './home-page/home-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PictureComponent,
     PictureListComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomePageComponent,
+    FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' }
