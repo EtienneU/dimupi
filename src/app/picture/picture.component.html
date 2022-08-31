@@ -1,6 +1,6 @@
-<div class="picture-card liked" [ngClass]="{liked: textLikeButton === 'Oops, unlike'}">
+<div class="picture-card" [ngClass]="{liked: textLikeButton === 'Oops, unlike'}">
   <h2>{{ picture.title | uppercase }}</h2> <!-- Le pipe permet de formater l'affichage (ici sur la casse du string) -->
   <div>{{ picture.description | lowercase}}</div>
   <img [src]="picture.imageUrl" [alt]="picture.title">
-  <button (click)="onViewDetails()">View details - {{picture.liked}}</button>
+  <button (click)="onViewDetails()">View details</button>
 </div>
