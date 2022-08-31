@@ -18,20 +18,21 @@ export class PictureComponent implements OnInit, OnDestroy {
               private router: Router) { }
 
   ngOnInit(): void {
-    this.textLikeButton = 'I like it !';
+    this.textLikeButton = !this.picture.liked ? 'I like it !' : 'Oops, unlike';
   }
 
   ngOnDestroy(): void {
   }
 
   onClickLike() {
-    if (this.textLikeButton === 'I like it !') {
+    if (!this.picture.liked) {
       this.pictureService.onLikePictureById(this.picture.id, true);
       this.textLikeButton = 'Oops, unlike';
     } else {
       this.pictureService.onLikePictureById(this.picture.id, false);
       this.textLikeButton = 'I like it !';
     }
+    this.picture.liked = !this.picture.liked;
   }
 
   onViewDetails() {

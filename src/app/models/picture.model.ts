@@ -5,6 +5,7 @@ export class Picture {
   creationDate!: Date;
   imageUrl!: string;
   likes!: number;
+  liked!: boolean;
   location?: string // propriété optionelle (d'où le '?')
   price?: number;
 }

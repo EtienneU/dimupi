@@ -13,10 +13,13 @@ app-footer{
   justify-content: space-around;
   align-items: center;
   background-color: #ffffff;
-  font-size: 1.0em;
-  border-bottom: 3px solid #ef166d;
+  font-size: 0.9em;
+  border-top: 3px solid #ef166d;
   margin-top: 10px;
   width: 100%;
+  position:fixed;
+  bottom:0;
+  height:30px;
 }
 
 svg#clouds {
